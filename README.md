@@ -1,8 +1,8 @@
-- [] write a better README
-- [] add a gif of motions and sensors
+- [ ] write a better README
+- [ ] add a gif of motions and sensors
 - [x] abstract
-- [] update bibtex
-- []update links to authors
-- [] link to github
-- [] link to paper
-- [] link to arXiv
+- [ ] update bibtex
+- [ ]update links to authors
+- [ ] link to github
+- [ ] link to paper
+- [ ] link to arXiv
