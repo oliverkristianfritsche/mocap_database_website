@@ -47,7 +47,7 @@
               <span class="author-block"><a href="#" target="_blank">Steven Camacho</a>,</span>
               <span class="author-block"><a href="#" target="_blank">Tyler Halpenny</a>,</span>
               <span class="author-block"><a href="#" target="_blank">Carlos Archniegas</a>,</span>
-              <span class="author-block"><a href="#" target="_blank">Md Sanzid Bin Hossain</a>,</span>
+              <span class="author-block"><a href="#" target="_blank">Sanzid Bin Hossain</a>,</span>
               <span class="author-block"><a href="#" target="_blank">Joseph Dranetz</a>,</span>
               <span class="author-block"><a href="#" target="_blank">Hwan Choi</a></span>
             </div>
@@ -73,6 +73,11 @@
                   <a href="https://arxiv.org/abs/YOUR_ARXIV_PAPER_ID" target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon"><i class="ai ai-arxiv"></i></span>
                     <span>arXiv</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/YOUR_ARXIV_PAPER_ID" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span>Download Dataset</span>
                   </a>
                 </span>
               </div>
@@ -130,7 +135,7 @@
       <div class="container">
         <div id="results-carousel" class="carousel results-carousel">
           <div class="item">
-            <img src="./static/images/Movements.png" alt="Movement Visualization">
+            <img src="./static/images/Movements2.png" alt="Movement Visualization">
             <h2 class="subtitle has-text-centered">Movement Visualization</h2>
           </div>
           <div class="item">
@@ -192,6 +197,65 @@
           </tr>
         </tbody>
       </table>
+    </div>
+  </div>
+</section>
+
+<!-- Subject Distributions Section -->
+<section class="section">
+  <div class="container">
+    <h2 class="title is-3 has-text-centered">Subject Distributions</h2>
+    <div class="columns">
+      <div class="column">
+        <img src="./static/images/subject_distributions.png" alt="Subject Distributions">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Dataset Folder Structure Section -->
+<section class="section">
+  <div class="container">
+    <h2 class="title is-3 has-text-centered">Dataset Folder Structure</h2>
+    <div class="content">
+      <pre><code>
+Dataset Root:
+│   ├── Bilateral Upper Extremity Trunk Model_markered.osim
+│   ├── opensim.log
+│   ├── subject_X.osim                                   # OpenSim models for each subject (X=1, 2, ... 13)
+│   ├── default_ik.xml
+│   ├── _ik_marker_errors.sto
+│
+├───P01                                                  # Subject 01 data
+│   │   ├── scaling_v0.xml                               # Initial scaling for OpenSim
+│   │   ├── scaling_v1.xml
+│   │
+│   ├───raw_sensor                                       # Raw sensor data (CSV)
+│   │       ├── P01_T1_EF_F.csv                          # T1, Elbow Flexion (EF), Fast (F)
+│   │       ├── P01_T1_AS_VF.csv                         # T1, Arm Swing (AS), Very Fast (VF)
+│   │       └── ...
+│   │
+│   ├───raw_marker                                       # Raw marker data (TRC)
+│   │       ├── P01_T1_EF_F.trc
+│   │       ├── P01_T1_AS_VF.trc
+│   │       └── ...
+│   │
+│   └───processed_joint_kinematics                       # Processed kinematics (MOT)
+│           ├── P01_T1_EF_F.mot
+│           ├── P01_T1_AS_VF.mot
+│           └── ...
+│
+├───P02                                                  # Subject 02 data
+│   │   ├── scaling_v0.xml
+│   │   ├── scaling_v1.xml
+│   ├───raw_sensor
+│   ├───raw_marker
+│   └───processed_joint_kinematics
+│
+├───P03                                                  # Similar structure for Subject 03
+│
+└───P04                                                  # Similar structure for Subject 04
+      </code></pre>
     </div>
   </div>
 </section>
